@@ -1,24 +1,33 @@
-// function showTime() {
-    //get New Date
+function showTime() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let seconds = date.getSeconds();
+    let am_pm = "PM";
 
-    //hour variable
-    //minute variable
-    //second variable
-    //am_pm = "PM" (variable)
-//}
+    // Set AM/PM depending on the hour value.
+    if (hour > 12){
+        hour -= 12;
+        am_pm = "PM";
+    }
+
+    if (hour == 0) {
+        hour = 12;
+        am_pm = "AM"
+    }
 
 
-// Set AM/PM depending on the hour value.
-// if hour > 12
-//  PM
+    hour = hour < 10 ? "0" + hour : hour;
+    minute = minute < 10 ? "0" + minute : minute;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
-// if hour === 0
-// AM
-
+    let currentTime = hour + ":" + min + ":" + sec + am_pm;
 
 
+    console.log(currentTime);
+}
 
-//let currentTime = hour + ":" + min + ":" + sec + am_pm
+
 
 
 
