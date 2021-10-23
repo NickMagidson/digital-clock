@@ -1,4 +1,5 @@
 function showTime() {
+    // Variables
     let date = new Date();
     let hour = date.getHours();
     let minute = date.getMinutes();
@@ -16,19 +17,17 @@ function showTime() {
         am_pm = "AM"
     }
 
-
     hour = hour < 10 ? "0" + hour : hour;
     minute = minute < 10 ? "0" + minute : minute;
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    let currentTime = hour + ":" + min + ":" + sec + am_pm;
 
+    let currentTime = hour + ":" + minute + ":" + seconds + " " + am_pm;
 
-    console.log(currentTime);
+    let clock = document.getElementById('clock-display')
+    clock.innerHTML = currentTime;
+
+    setTimeout(showTime, 1000);
 }
 
-
-
-
-
-//Wrap whole code in setInterval(, )??
+showTime();
