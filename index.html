@@ -10,13 +10,22 @@
 </head>
 <body>
     <header class="header">
+
         <div>
             <h2 class="title">Digital Clock</h2>
         </div>
-        <div id="button-div">
-            <button class="buttons">Time Zones</button>
-            <button class="buttons">Skins</button>
+
+        <div>
+            <button class="buttons">Zones</button>
+            <button class="buttons" onclick="dropDown()">Skins</button>
+            <div id="skin-dropdown" class="dropdown-content">
+                <a href="#" class="skin">Basic</a>
+                <a href="#" class="skin">Fancy</a>
+                <a href="#" class="skin">Wonderland</a>
+                <a href="#" class="skin">1920s</a>
+            </div>
         </div>
+
     </header>
 
     <div class="container">
